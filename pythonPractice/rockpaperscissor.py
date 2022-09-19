@@ -27,9 +27,9 @@ hand = {
 '''
 }
 
-#user input
+#looping games so that you can continue playing
 while True:
-    #userChoice = input('rock,paper, or scissors?').lower()
+    #user input
     userChoice = input('rock,paper, or scissor?').lower()
 
     #trying to catch wrong input
