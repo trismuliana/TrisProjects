@@ -28,25 +28,32 @@ hand = {
 }
 
 #user input
+while True:
+    #userChoice = input('rock,paper, or scissors?').lower()
+    userChoice = input('rock,paper, or scissor?').lower()
 
-userChoice = input('rock,paper, or scissors?').lower()
+    #trying to catch wrong input
+    try:
+        userChoice == hand[userChoice]
+    except KeyError:
+        print ("Wrong Input!")
+        continue
 
+    #Computer choice we gonna put the keys of the dictionaries into a lists
+    r = random.choice(list (hand.keys()))
 
-#Computer choice we gonna put the keys of the dictionaries into a lists
-r = random.choice(list (hand.keys()))
+    #print (hand[r]) #the computer choice
 
-#print (hand[r]) #the computer choice
-
-if userChoice ==r:
-    print("Draw!")
-elif userChoice == 'paper' and r == 'scissors':
-    print("You have lost!")
-elif userChoice == 'scissor' and r == 'rock':
+    if userChoice ==r:
+        print("Draw!")
+    elif userChoice == 'paper' and r == 'scissors':
         print("You have lost!")
-elif userChoice == 'rock' and r == 'paper':
-    print("You have Lost!")
-else:
-    print ("You have won!")
+    elif userChoice == 'scissor' and r == 'rock':
+            print("You have lost!")
+    elif userChoice == 'rock' and r == 'paper':
+        print("You have Lost!")
+    else:
+        print ("You have won!")
 
-print ("Computer: " + hand[r]) #the computer choice
-print ("You: " + hand[userChoice])
+    print ("Computer: " + hand[r]) #the computer choice
+    print ("You: " + hand[userChoice])
