@@ -57,3 +57,7 @@ while True:
 
     print ("Computer: " + hand[r]) #the computer choice
     print ("You: " + hand[userChoice])
+
+    play_again = input("Play again? (y/n): ")
+    if play_again.lower() != "y":
+        break
