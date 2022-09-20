@@ -21,3 +21,5 @@ with open('Ahousing.csv', 'w', encoding='UTF8', newline='') as f:
 
         info = [title,location,price,area]
         thewriter.writerow(info)
+
+       
